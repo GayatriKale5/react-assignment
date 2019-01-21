@@ -1,0 +1,110 @@
+// Mixins
+$color-white: #ffffff;
+$color-blue: #2196F3;
+$heading-color-black: #111111;
+$black-color-onpage: #2f2f2f;
+
+$common-padding-li-a-scrollable-area: 1.5rem;
+$box-shadow: 0px 10px 40px 0px rgba(1, 1, 1, 0.1);
+$box-shadow-header: 0px 1px 20px 0px rgba(0, 0, 0, 0.10);
+
+// SCSS
+
+body {
+    font-size: 1rem;
+    color: $black-color-onpage;
+    background: #F2F2F2;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.scrollable-area {
+    position: relative;
+    height: 100vh;
+    // top: $common-padding-li-a-scrollable-area;
+    overflow: auto;
+    font-size: 1.3rem;
+}
+
+
+.sections-colm {
+    position: relative;
+    top: 5rem;
+}
+
+.section1 {
+    background-color: $color-white;
+    box-shadow: $box-shadow;
+    width: 90%;
+    margin-top: $common-padding-li-a-scrollable-area;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    position: fixed;
+    z-index: 1;
+    top: $common-padding-li-a-scrollable-area;
+    left: 2.5rem;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3rem;
+    background: $color-white;
+    list-style-type: none;
+    box-shadow: $box-shadow-header;
+
+    li {
+        padding: $common-padding-li-a-scrollable-area 0;
+        transition: background-color .3s;
+
+        a {
+            font-size: 1rem;
+            text-decoration: none;
+            padding: $common-padding-li-a-scrollable-area 1rem;
+            color: $heading-color-black;
+        }
+
+        &.is-current,
+        &:hover {
+            color: $color-white;
+            background: $color-blue;
+
+            a {
+                color: $color-white;
+            }
+        }
+    }
+}
+
+/*
+Left side block
+*/
+
+.fixed-left-side-block {
+    top: 7rem;
+    bottom: 0;
+    left: 30px;
+    width: 24%;
+    padding: 1rem;
+    position: fixed;
+    min-height: 60%;
+    overflow-x: hidden;
+    background-color: $color-white;
+    box-shadow: $box-shadow;
+}
