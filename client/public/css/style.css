@@ -1,3 +1,4 @@
+html,
 body {
   font-size: 1rem;
   color: #2f2f2f;
@@ -6,18 +7,104 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  line-height: 1.625;
+  letter-spacing: .5px;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  color: #111111;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+strong {
+  font-weight: 500;
+}
+
+button,
+a {
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.custom-btn {
+  width: 230px;
+  height: 70px;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 70px;
+  text-align: center;
+  display: inline-block;
+  background-color: #2196F3;
+  text-decoration: none;
+}
+
+.custom-btn i {
+  margin-right: .8rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.Section-title {
+  margin-bottom: 60px;
+}
+
+.Section-title h2 {
+  font-size: 40px;
+  font-weight: 700;
+  padding: 15px 0px;
+  line-height: 0.65;
+  position: relative;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 480px) {
+  .Section-title h2 {
+    font-size: 18px;
+  }
+}
+
+.Section-title h2 > i {
+  color: #2196F3;
+  margin-right: 1.2rem;
 }
 
 .scrollable-area {
   position: relative;
-  height: 100vh;
+  height: auto;
   overflow: auto;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .sections-colm {
   position: relative;
-  top: 5rem;
+  margin-top: 5rem;
 }
 
 .section1 {
@@ -25,9 +112,27 @@ body {
   -webkit-box-shadow: 0px 10px 40px 0px rgba(1, 1, 1, 0.1);
           box-shadow: 0px 10px 40px 0px rgba(1, 1, 1, 0.1);
   width: 90%;
-  margin-top: 1.5rem;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+  padding: 80px 50px;
+}
+
+.section1::before {
+  content: "";
+  margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 991px) {
+  .section1 {
+    padding: 35px 30px;
+  }
+}
+
+@media screen and (max-width: 48px) {
+  .section1 {
+    width: 100%;
+  }
 }
 
 .logo {
@@ -42,13 +147,22 @@ body {
   height: auto;
 }
 
-ul {
+@media screen and (max-width: 1200px) {
+  .logo {
+    display: none;
+  }
+}
+
+/*
+Header
+*/
+.header-ul ul {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   padding: 0;
-  margin: 0;
+  margin-top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,26 +176,32 @@ ul {
           box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
-ul li {
-  padding: 1.5rem 0;
+.header-ul ul li {
+  padding: 1.9rem 0;
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
 }
 
-ul li a {
+.header-ul ul li a {
   font-size: 1rem;
   text-decoration: none;
-  padding: 1.5rem 1rem;
+  padding: 1.9rem 1rem;
   color: #111111;
 }
 
-ul li.is-current, ul li:hover {
+.header-ul ul li.is-current, .header-ul ul li:hover {
   color: #ffffff;
   background: #2196F3;
 }
 
-ul li.is-current a, ul li:hover a {
+.header-ul ul li.is-current a, .header-ul ul li:hover a {
   color: #ffffff;
+}
+
+@media screen and (max-width: 992px) {
+  .header-ul ul li {
+    display: none;
+  }
 }
 
 /*
@@ -92,12 +212,275 @@ Left side block
   bottom: 0;
   left: 30px;
   width: 24%;
-  padding: 1rem;
   position: fixed;
   min-height: 60%;
   overflow-x: hidden;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 10px 40px 0px rgba(1, 1, 1, 0.1);
           box-shadow: 0px 10px 40px 0px rgba(1, 1, 1, 0.1);
+  text-align: center;
+}
+
+.fixed-left-side-block::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.fixed-left-side-block {
+  overflow: -moz-scrollbars-none;
+}
+
+.fixed-left-side-block {
+  -ms-overflow-style: none;
+}
+
+.fixed-left-side-block .profile {
+  padding: 80px 0px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.fixed-left-side-block .profile .profile-image {
+  padding: 0px 40px 0px 40px;
+}
+
+.fixed-left-side-block .profile .profile-name {
+  -webkit-box-shadow: 0px 1px 12px 3px rgba(1, 1, 1, 0.1);
+          box-shadow: 0px 1px 12px 3px rgba(1, 1, 1, 0.1);
+  padding: 35px 0px;
+}
+
+.fixed-left-side-block .profile .profile-name .user-name {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.fixed-left-side-block .profile .profile-name .photoshop-color {
+  color: #2196F3;
+}
+
+.fixed-left-side-block .profile .social-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px 0px;
+  margin: 1rem 0;
+}
+
+.fixed-left-side-block .profile .social-btn li {
+  margin: 5px;
+  width: 35px;
+  height: 35px;
+  opacity: 0.2;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: #000000;
+  list-style-type: none;
+}
+
+.fixed-left-side-block .profile .social-btn li:hover {
+  opacity: 1;
+  background-color: #2196F3;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.fixed-left-side-block .profile .social-btn li a {
+  color: #ffffff;
+  line-height: 35px;
+}
+
+.fixed-left-side-block .profile .discription {
+  padding: 30px;
+  text-align: left;
+  margin-bottom: 50px;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.fixed-left-side-block .profile .discription .title {
+  font-size: 1rem;
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/*
+Education
+*/
+.education-accordian-section .accordian {
+  border: none;
+  margin: 0px;
+  -webkit-box-shadow: 0px 10px 40px 0px rgba(1, 1, 1, 0.1);
+          box-shadow: 0px 10px 40px 0px rgba(1, 1, 1, 0.1);
+}
+
+.education-accordian-section .accordian .head {
+  padding: 10px 20px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  min-height: 3rem;
+  line-height: 3rem;
+  background-color: #ffffff;
+}
+
+.education-accordian-section .accordian .head .icon {
+  width: 80px;
+  height: auto;
+  text-align: center;
+  border-right: 1px solid #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.education-accordian-section .accordian .head .icon i {
+  width: 2rem;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+  .education-accordian-section .accordian .head .icon {
+    display: none;
+  }
+}
+
+.education-accordian-section .accordian .head p {
+  display: table;
+  color: #111111;
+  font-size: 1rem;
+  padding: 17px 40px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 991px) {
+  .education-accordian-section .accordian .head p {
+    padding: 15px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .education-accordian-section .accordian .head p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.education-accordian-section .accordian .head::before {
+  color: #2196F3;
+  top: 50%;
+  right: 30px;
+  position: absolute;
+  font-family: 'FontAwesome';
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-transform: translateY(-50%) rotate(-180deg);
+          transform: translateY(-50%) rotate(-180deg);
+  content: "\f067";
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+  .education-accordian-section .accordian .head::before {
+    right: 15px;
+    font-size: .8rem;
+  }
+}
+
+.education-accordian-section .accordian .body {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.education-accordian-section .accordian .body span {
+  color: #818181;
+}
+
+.education-accordian-section .accordian.active0 .head::before,
+.education-accordian-section .accordian.active1 .head::before,
+.education-accordian-section .accordian.active2 .head::before,
+.education-accordian-section .accordian.active3 .head::before,
+.education-accordian-section .accordian.active4 .head::before {
+  content: "\f068";
+  -webkit-transform: translateY(-50%) rotate(0deg);
+          transform: translateY(-50%) rotate(0deg);
+}
+
+.education-accordian-section .accordian.active0 > .body,
+.education-accordian-section .accordian.active1 > .body,
+.education-accordian-section .accordian.active2 > .body,
+.education-accordian-section .accordian.active3 > .body,
+.education-accordian-section .accordian.active4 > .body {
+  border: none;
+  padding: 50px 60px;
+  background-color: #f7f7f7;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  max-height: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .education-accordian-section .accordian.active0 > .body,
+  .education-accordian-section .accordian.active1 > .body,
+  .education-accordian-section .accordian.active2 > .body,
+  .education-accordian-section .accordian.active3 > .body,
+  .education-accordian-section .accordian.active4 > .body {
+    padding: 15px;
+  }
+}
+
+.education-accordian-section .accordian .blue-pencil,
+.education-accordian-section .accordian.active0 .icon i,
+.education-accordian-section .accordian .head.blue-icon::before,
+.education-accordian-section .accordian.active0 .head::before {
+  color: #2196F3;
+}
+
+.education-accordian-section .accordian .green-pencil,
+.education-accordian-section .accordian.active1 .icon i,
+.education-accordian-section .accordian .head.green-icon::before,
+.education-accordian-section .accordian.active1 .head::before {
+  color: #26a69a;
+}
+
+.education-accordian-section .accordian .red-pencil,
+.education-accordian-section .accordian.active2 .icon i,
+.education-accordian-section .accordian .head.red-icon::before,
+.education-accordian-section .accordian.active2 .head::before {
+  color: #ef5350;
+}
+
+.education-accordian-section .accordian .yellow-pencil,
+.education-accordian-section .accordian.active3 .icon i,
+.education-accordian-section .accordian .head.yellow-icon::before,
+.education-accordian-section .accordian.active3 .head::before {
+  color: #fbc02d;
+}
+
+.education-accordian-section .accordian .purple-pencil,
+.education-accordian-section .accordian.active4 .icon i,
+.education-accordian-section .accordian .head.purple-icon::before,
+.education-accordian-section .accordian.active4 .head::before {
+  color: #ab47bc;
 }
 /*# sourceMappingURL=style.css.map */
