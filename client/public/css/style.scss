@@ -48,6 +48,24 @@ h6 {
     text-transform: capitalize;
 }
 
+h2.title {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
 p {
     margin: 0;
     padding: 0;
@@ -60,6 +78,10 @@ strong {
 button,
 a {
     transition: all .4s ease-in-out;
+}
+
+a {
+    text-decoration: none;
 }
 
 .custom-btn {
@@ -126,7 +148,7 @@ img {
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-    padding: 80px 50px;
+    padding: 90px 50px;
 
     &::before {
         content: "";
@@ -458,4 +480,432 @@ Education
             color: $color-purple;
         }
     }
+}
+
+/*
+About
+*/
+
+.td-w25 {
+    width: 25%;
+}
+
+.td-w10 {
+    width: 10%;
+}
+
+.td-w65 {
+    width: 65%;
+    color: $heading-color-black;
+    font-style: italic;
+}
+
+.personal-details-area {
+    margin-bottom: 60px;
+}
+
+ul.ul-li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.about-section {
+    .success {
+        width: 100%;
+        padding: 30px;
+        display: table;
+        background-color: $color-blue;
+        box-shadow: $box-shadow;
+
+        a.hire-me {
+            padding: 1.5rem 3.5rem;
+            color: $color-black;
+            font-size: 18px;
+            line-height: 70px;
+            text-align: center;
+            text-transform: capitalize;
+            background-color: $color-white;
+        }
+    }
+
+    .success-child-left {
+
+        p {
+            line-height: 50px;
+            font-size: 17px;
+            color: $color-white;
+            font-weight: 700;
+        }
+
+        i {
+            font-size: 50px;
+            margin-right: 15px;
+            float: left;
+            color: $color-white;
+        }
+    }
+
+    .success-child-right {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        float: right;
+    }
+
+    .personal-details-right {
+        padding-bottom: 30px;
+        border-bottom: $border-f0f0f0;
+
+        table td {
+            padding: 11px 5px;
+        }
+
+        h2.title {
+            margin-bottom: 50px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    ul.service-list li {
+        width: 155px;
+        height: 180px;
+        padding: 30px;
+        overflow: hidden;
+        position: relative;
+        margin-right: 25px;
+        margin-bottom: 25px;
+        background-color: $color-white;
+        box-shadow: $box-shadow;
+
+        span.service-name {
+            left: 25px;
+            bottom: 40px;
+            color: $heading-color-black;
+            font-size: 20px;
+            position: absolute;
+            text-transform: capitalize;
+            transition: all .2s ease-in-out;
+        }
+
+        &>i {
+            top: 40px;
+            left: 40px;
+            font-size: 40px;
+            position: absolute;
+        }
+
+        a.more {
+            top: 40px;
+            width: 45px;
+            right: -100%;
+            height: 35px;
+            color: $color-white;
+            line-height: 35px;
+            text-align: center;
+            position: absolute;
+            background-color: $color-blue;
+            transition: all .2s ease-in-out;
+
+            & i {
+                color: $color-white;
+            }
+        }
+
+        &:hover>a.more {
+            right: 0%;
+        }
+
+        &:hover>span.service-name {
+            bottom: 15px;
+            color: $color-white;
+        }
+
+        &:before {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            transition: all .2s ease-in-out;
+        }
+
+        &:hover:before {
+            height: 60px;
+        }
+
+        &.logodesign {
+
+            &:before {
+                background-color: $color-blue;
+            }
+
+            i {
+                color: $color-blue;
+            }
+        }
+
+        &.website {
+
+            &:before,
+            &>a.more {
+                background-color: $color-red;
+            }
+
+            i {
+                color: $color-red;
+            }
+        }
+
+        &.softwares {
+
+            &:before,
+            &>a.more {
+                background-color: $color-yellow;
+            }
+
+            i {
+                color: $color-yellow;
+            }
+        }
+
+        &.applications {
+
+            &:before,
+            &>a.more {
+                background-color: $color-purple;
+            }
+
+            i {
+                color: $color-purple;
+            }
+        }
+    }
+}
+
+/*
+Skill
+*/
+.tabs .tab {
+    display: inline-block;
+    text-align: center;
+    line-height: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
+
+.common-color {
+    color: $color-blue;
+}
+
+.content {
+    width: 119%;
+    margin-left: -5%;
+    padding: 60px 60px;
+    background-color: $color-white;
+    box-shadow: $box-shadow;
+
+    h2.title {
+        margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: 991px) {
+        & {
+            width: auto;
+            margin-left: 0;
+        }
+    }
+}
+
+
+.single_experties {
+    width: 100%;
+    display: table;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.skilled-tittle {
+    width: 30%;
+    float: left;
+}
+
+.professional-skills-area {
+    margin-bottom: 90px;
+
+    ul.ul-li {
+        justify-content: left;
+    }
+
+    ul.skills-tab {
+        margin-bottom: 40px;
+
+        li.tag-item {
+            float: left;
+            width: auto;
+            height: 53px;
+            line-height: 53px;
+            text-align: center;
+
+            a {
+                color: $heading-color-black;
+                padding: 0px 14px;
+                text-transform: lowercase;
+                transition: all 0.5s;
+
+                &:hover {
+                    background-color: $color-white;
+                    color: $color-blue;
+                    box-shadow: $box-shadow;
+                    transition: all 0.5s;
+                }
+            }
+        }
+
+        li.tag-icon {
+            width: 30px;
+            height: 53px;
+            color: $heading-color-black;
+            text-align: left;
+            line-height: 53px;
+        }
+    }
+}
+
+/*
+Progressbar
+*/
+.progress-container {
+    width: 70%;
+    height: 5px;
+    float: right;
+    border-radius: 0;
+    margin-top: 10px;
+    overflow: visible;
+    background-color: #f0f0f0;
+}
+
+.progress-bar {
+    background: $color-blue;
+    width: 15px;
+    height: 5px;
+    position: relative;
+
+    span {
+        right: -4%;
+        bottom: 10px;
+        font-weight: 700;
+        position: absolute;
+    }
+}
+
+.photoshop-progress {
+
+    .progress-bar {
+        background-color: $color-blue;
+    }
+
+    span {
+        color: $color-blue;
+    }
+}
+
+.html-progress {
+
+    .progress-bar {
+        background-color: #3f51b5;
+    }
+
+    span {
+        color: #3f51b5;
+    }
+}
+
+.jquery-progress {
+
+    .progress-bar {
+        background-color: $color-green;
+    }
+
+    span {
+        color: $color-green;
+    }
+}
+
+.php-progress {
+
+    .progress-bar {
+        background-color: $color-red;
+    }
+
+    span {
+        color: $color-red;
+    }
+}
+
+.css-progress {
+
+    .progress-bar {
+        background-color: $color-yellow;
+    }
+
+    span {
+        color: $color-yellow;
+    }
+}
+
+.marketing-progress {
+
+    .progress-bar {
+        background-color: $color-purple;
+    }
+
+    span {
+        color: $color-purple;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .skilled-tittle {
+        width: 100%;
+        margin-bottom: .7rem;
+    }
+
+    .progress-container {
+        width: 100%;
+    }
+}
+
+// piechart
+
+.circle {
+    height: 120px;
+    width: 120px;
+    float: left;
+    position: relative;
+    margin-right: 20px;
+}
+
+.circle strong {
+    position: absolute;
+    text-align: center;
+    top: 42%;
+    left: 0;
+    right: 0;
 }

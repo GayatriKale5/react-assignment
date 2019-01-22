@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 import Scrollspy from 'react-scrollspy';
 import FixedLeftBlockContent from '../fixed-left-block/FixedLeftBlockContent';
 import EducationSection from '../education/EducationSection';
+import AboutSection from '../about/AboutSection';
+import SkillSection from '../skill/SkillSection';
+
 
 class Header extends Component {
     render() {
@@ -18,70 +21,63 @@ class Header extends Component {
 
                         <div className="col-12 col-xl-9 sections-colm p-0">
                             <section id="section-home" className="scrollable-area section1">
-                                <div class="Section-title">
+                                <div className="Section-title">
                                     <h2>
-                                        <i class="fa fa-dashboard" aria-hidden="true"></i>Home
+                                        <i className="fa fa-dashboard" aria-hidden="true"></i>Home
                                     </h2>
                                 </div>
                             </section>
                             <section id="section-about" className="scrollable-area section1">
-                                <div class="Section-title">
-                                    <h2>
-                                        <i class="fa fa-user-o" aria-hidden="true"></i>
-                                        about me
-				                    </h2>
-                                </div>
+                                <AboutSection />
                             </section>
                             <section id="section-skill" className="scrollable-area section1">
-                                <div class="Section-title">
-                                    <h2>
-                                        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-                                        my skills
-				                    </h2>
-                                </div>
+                                <SkillSection />
                             </section>
                             <section id="section-education" className="scrollable-area section1">
                                 <EducationSection />
                             </section>
                             <section id="section-portfolio" className="scrollable-area section1">
-                                <div class="Section-title">
+                                <div className="Section-title">
                                     <h2>
-                                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                        <i className="fa fa-briefcase" aria-hidden="true"></i>
                                         My Portfolio
 				                    </h2>
                                 </div>
                             </section>
                             <section id="section-testimonial" className="scrollable-area section1">
-                                <div class="Section-title">
+                                <div className="Section-title">
                                     <h2>
-                                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                        <i className="fa fa-quote-left" aria-hidden="true"></i>
                                         testomonials
 				                    </h2>
                                 </div>
                             </section>
 
                             <section id="section-exprience" className="scrollable-area section1">
-                                <div class="Section-title">
+                                <div className="Section-title">
                                     <h2>
-                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                        <i className="fa fa-pencil" aria-hidden="true"></i>
                                         Work Experience
 				                    </h2>
                                 </div>
                             </section>
                             <section id="section-blog" className="scrollable-area section1">
-                                <div class="Section-title">
+                                <div className="Section-title">
                                     <h2>
-                                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                                        <i className="fa fa-newspaper-o" aria-hidden="true"></i>
                                         Latest News
 				                    </h2>
                                 </div>
                             </section>
-                            <section id="section-contact" className="scrollable-area section1">
-                                Contact
+                            <section id="section-contact" className="scrollable-area mb-30 section1">
+                                <div className="Section-title">
+                                    <h2>
+                                        <i className="fa fa-envelope-o" aria-hidden="true"></i>
+                                        contact me
+				                    </h2>
+                                </div>
                             </section>
                         </div>
-
-
 
                         {/* header */}
                         <Link to="/" className="logo">
@@ -136,7 +132,7 @@ class Header extends Component {
 
                     </div>
                 </div>
-            </Router >
+            </Router>
         );
     }
 }
